@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Pages.apps.PagesConfig',
+    'Cadastro.apps.CadastroConfig',
     #'nomedoapp.apps.NomedoappConfig',
 ]
 
