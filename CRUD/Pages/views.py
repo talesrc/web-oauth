@@ -11,3 +11,6 @@ class IndexView(TemplateView):
 
 class ModeloView(TemplateView):
     template_name = 'Pages/modelo.html'
+
+class SobreView(TemplateView):
+    template_name = 'Pages/sobre.html'
