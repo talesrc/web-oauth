@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Pages.apps.PagesConfig',
     'Cadastro.apps.CadastroConfig',
+    'Autenticacao.apps.AutenticacaoConfig',
     'crispy_forms',
     #'nomedoapp.apps.NomedoappConfig',
 ]
