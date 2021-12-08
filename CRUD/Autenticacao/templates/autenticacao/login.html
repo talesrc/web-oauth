@@ -6,16 +6,20 @@
 
 {% load crispy_forms_tags %}
 
-    <h3>Login</h3>
+    <center><h3>Login</h3></center>
 
-    <form action="" method="POST">
-        {% csrf_token %}
-
-        {{ form|crispy }}
-
-        <br>
-        <button type="submit" class="btn btn-primary">Entrar</button>
-        <br>
-
-    </form>
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <form action="" method="POST">
+                {% csrf_token %}
+        
+                {{ form|crispy }}
+        
+                <br>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+                <br>
+        
+            </form>
+        </div>
+    </div>
 {% endblock %}
