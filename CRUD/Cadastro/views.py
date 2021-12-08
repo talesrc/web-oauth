@@ -5,19 +5,22 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from .models import Livro, Local
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 ################## CREAT ####################### 
 
 class CadastroView(TemplateView):
     template_name = 'Cadastro/form.html'
 
-class LocalCreat(CreateView):
+class LocalCreat(LoginRequiredMixin, CreateView):
+    login_url = reverse_lazy('login')
     model = Local
     fields = ['codigo', 'descricao', 'corredor', 'estante']
     template_name = 'Cadastro/form.html'
     success_url = reverse_lazy('listar-local')
 
-class LivroCreat(CreateView):
+class LivroCreat(LoginRequiredMixin, CreateView):
+    login_url = reverse_lazy('login')
     model = Livro
     fields = ['titulo', 'autor', 'ano', 'local']
     template_name = 'Cadastro/form.html'
@@ -25,13 +28,15 @@ class LivroCreat(CreateView):
 
 ################## UPDATE ####################### 
 
-class LocalUpdate(UpdateView):
+class LocalUpdate(LoginRequiredMixin, UpdateView):
+    login_url = reverse_lazy('login')
     model = Local
     fields = ['codigo', 'descricao', 'corredor', 'estante']
     template_name = 'Cadastro/form.html'
     success_url = reverse_lazy('listar-local')
 
-class LivroUpdate(UpdateView):
+class LivroUpdate(LoginRequiredMixin, UpdateView):
+    login_url = reverse_lazy('login')
     model = Livro
     fields = ['titulo', 'autor', 'ano', 'local']
     template_name = 'Cadastro/form.html'
@@ -39,21 +44,25 @@ class LivroUpdate(UpdateView):
 
 
 ################## DELETE ########################
-class LocalDelete(DeleteView):
+class LocalDelete(LoginRequiredMixin, DeleteView):
+    login_url = reverse_lazy('login')
     model = Local
     template_name = 'Cadastro/excluir.html'
     success_url = reverse_lazy('home')
 
-class LivroDelete(DeleteView):
+class LivroDelete(LoginRequiredMixin, DeleteView):
+    login_url = reverse_lazy('login')
     model = Livro
     template_name = 'Cadastro/excluir.html'
     success_url = reverse_lazy('listar-local')
 
 ################## READ ########################
-class LocalList(ListView):
+class LocalList(LoginRequiredMixin, ListView):
+    login_url = reverse_lazy('login')
     model = Local
     template_name = 'Cadastro/listaLocal.html'
 
-class LivroList(ListView):
+class LivroList(LoginRequiredMixin, ListView):
+    login_url = reverse_lazy('login')
     model = Livro
     template_name = 'Cadastro/listaLivro.html'
