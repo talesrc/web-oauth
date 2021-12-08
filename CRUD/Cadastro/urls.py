@@ -3,6 +3,7 @@ from django.urls.resolvers import URLPattern
 from .views import CadastroView
 from .views import LivroCreat, LocalCreat
 from .views import LivroUpdate, LocalUpdate
+from .views import LivroDelete, LocalDelete
 
 urlpatterns = [
     #Cadastro - form.html
@@ -12,5 +13,8 @@ urlpatterns = [
 
     path('editar/local/<str:pk>/', LocalUpdate.as_view(), name='editar-local'),
     path('editar/livro/<int:pk>/', LivroUpdate.as_view(), name='editar-livro'),
+
+    path('excluir/local/<str:pk>/', LocalDelete.as_view(), name='excluir-local'),
+    path('excluir/livro/<int:pk>/', LivroDelete.as_view(), name='excluir-livro'),
 
 ]
