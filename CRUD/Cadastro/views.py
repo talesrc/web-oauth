@@ -2,7 +2,7 @@ from django.db import models
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
-from .models import Atividade, Disciplina
+from .models import Livro, Local
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -10,14 +10,14 @@ from django.urls import reverse_lazy
 class CadastroView(TemplateView):
     template_name = 'Cadastro/form.html'
 
-class DisciplinaCreat(CreateView):
-    model = Disciplina
-    fields = ['nome', 'descricao']
+class LocalCreat(CreateView):
+    model = Local
+    fields = ['codigo', 'descricao', 'corredor', 'estante']
     template_name = 'Cadastro/form.html'
     success_url = reverse_lazy('home')
 
-class AtividadeCreat(CreateView):
-    model = Atividade
-    fields = ['numero', 'descricao', 'pontos', 'detalhes', 'disciplina']
+class LivroCreat(CreateView):
+    model = Livro
+    fields = ['titulo', 'autor', 'ano', 'local']
     template_name = 'Cadastro/form.html'
     success_url = reverse_lazy('home')

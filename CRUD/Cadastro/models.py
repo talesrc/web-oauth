@@ -1,20 +1,24 @@
 from django.db import models
 
 # Create your models here.
-class Disciplina(models.Model):
-    nome = models.CharField(max_length=50)
+class Local(models.Model):
+    codigo = models.CharField(max_length=50, primary_key=True, verbose_name="Código")
     descricao = models.CharField(max_length=150, verbose_name="Descrição")
+    corredor = models.IntegerField()
+    estante = models.IntegerField()
 
     def __str__(self):
-        return "{} ({})".format(self.nome, self.descricao)
+        return "{} ({})".format(self.codigo, self.descricao, self.corredor, self.estante)
 
-class Atividade(models.Model):
-    numero = models.IntegerField(verbose_name="Número")
-    descricao = models.CharField(max_length=150, verbose_name="Descrição")
-    pontos = models.DecimalField(decimal_places=1, max_digits=4)
-    detalhes = models.CharField(max_length=100)
-
-    disciplina = models.ForeignKey(Disciplina, on_delete=models.PROTECT)
+class Livro(models.Model):
+    #numero = models.IntegerField(verbose_name="Número")
+    #descricao = models.CharField(max_length=150, verbose_name="Descrição")
+    #pontos = models.DecimalField(decimal_places=1, max_digits=4)
+    #detalhes = models.CharField(max_length=100)
+    local = models.ForeignKey(Local, on_delete=models.PROTECT)
+    titulo = models.CharField(max_length=80, verbose_name="Título")
+    autor = models.CharField(max_length=50)
+    ano = models.IntegerField()
 
     def __str__(self):
-        return "{} ({})".format(self.numero, self.descricao, self.disciplina.nome)
+        return "{} ({})".format(self.titulo, self.autor, self.ano, self.local.codigo)

@@ -1,8 +1,8 @@
 from django.contrib import admin
 
 #Importar as classes
-from .models import Disciplina, Atividade
+from .models import Local, Livro
 
 # Register your models here.
-admin.site.register(Disciplina)
-admin.site.register(Atividade)
+admin.site.register(Local)
+admin.site.register(Livro)
