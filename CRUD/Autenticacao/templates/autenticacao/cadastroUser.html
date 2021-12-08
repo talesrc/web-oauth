@@ -1,0 +1,22 @@
+{% extends 'Pages/modelo.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+
+{% load crispy_forms_tags %}
+
+    <center><h3>Cadastrar</h3></center>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        {{ form|crispy }}
+        
+        <br>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <br>
+        
+    </form>
+
+{% endblock %}
