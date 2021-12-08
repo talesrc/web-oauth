@@ -1,0 +1,37 @@
+{% extends 'Pages/modelo.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+    <h3>Lista de Gêneros resgistrados</h3>
+    <div class="table table-reponsive">
+        <table class="table table-striped">
+            <tr>
+                <th>Gênero</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Ano</th>
+                <th>Opções</th>   
+            </tr>
+
+            {% for livro in object_list %}
+            <tr>
+                <td>{{ livro.local }}</td>
+                <td>{{ livro.titulo }}</td>
+                <td>{{ livro.autor }}</td>
+                <td>{{ livro.ano }}</td>
+                <td>
+                    <a href="{% url 'editar-livro' livro.pk %}" class="btn btn-warning btn-sm">Editar</a>                    
+                    <a href="{% url 'excluir-livro' livro.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+
+                </td>
+            </tr>
+            {% empty %}
+
+            <tr>
+                <td colspan="3">Nenhum livro cadastrado</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
