@@ -2,13 +2,13 @@ from django.db import models
 
 # Create your models here.
 class Local(models.Model):
-    codigo = models.CharField(max_length=50, primary_key=True, verbose_name="Código")
-    descricao = models.CharField(max_length=150, verbose_name="Descrição")
+    codigo = models.CharField(max_length=6, primary_key=True, verbose_name="Código")
+    descricao = models.CharField(max_length=50, verbose_name="Gênero")
     corredor = models.IntegerField()
     estante = models.IntegerField()
 
     def __str__(self):
-        return "{} ({})".format(self.codigo, self.descricao, self.corredor, self.estante)
+        return "{} - {}, {} ({})".format(self.codigo, self.descricao, self.corredor, self.estante)
 
 class Livro(models.Model):
     #numero = models.IntegerField(verbose_name="Número")
@@ -21,4 +21,4 @@ class Livro(models.Model):
     ano = models.IntegerField()
 
     def __str__(self):
-        return "{} ({})".format(self.titulo, self.autor, self.ano, self.local.codigo)
+        return "{} - {}, {} ({})".format(self.titulo, self.autor, self.ano, self.local.codigo)
