@@ -3,7 +3,10 @@
 {% load static %}
 
 {% block conteudo %}
-    <h3>Lista de Gêneros resgistrados</h3>
+    <hr>
+    <h3>Gêneros resgistrados</h3>
+    <a href="{% url 'cadastro-livro' %}" class="btn btn-primary btn-sm float-right">Cadastrar Livro</a>
+    <hr>
     <div class="table table-reponsive">
         <table class="table table-striped">
             <tr>

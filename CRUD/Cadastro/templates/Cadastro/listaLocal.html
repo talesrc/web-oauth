@@ -3,7 +3,10 @@
 {% load static %}
 
 {% block conteudo %}
+    <hr>
     <h3>Lista de Gêneros resgistrados</h3>
+    <a href="{% url 'cadastro-local' %}" class="btn btn-primary btn-sm">Cadastrar Gênero</a>
+    <hr>
     <div class="table table-reponsive">
         <table class="table table-striped">
             <tr>

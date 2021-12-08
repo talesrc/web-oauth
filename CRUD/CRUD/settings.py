@@ -41,8 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Pages.apps.PagesConfig',
     'Cadastro.apps.CadastroConfig',
+    'crispy_forms',
     #'nomedoapp.apps.NomedoappConfig',
 ]
+
+#Crispy Forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
