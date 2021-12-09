@@ -30,5 +30,9 @@ urlpatterns = [
     path('listar/livro/', LivroList.as_view(), name='listar-livro'),
     path('listar/artigo/', ArtigoList.as_view(), name='listar-artigo'),
 
+    #READ não autenticado
+    path('exibir/livro/', LivroList.as_view(), name='exibir-livro'),
+    path('exibir/artigo/', ArtigoList.as_view(), name='exibir-artigo'),
+
 
 ]

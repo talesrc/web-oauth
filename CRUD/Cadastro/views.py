@@ -8,7 +8,6 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 ################## CREAT ####################### 
-
 class CadastroView(TemplateView):
     template_name = 'Cadastro/form.html'
 
@@ -90,3 +89,13 @@ class ArtigoList(LoginRequiredMixin, ListView):
     login_url = reverse_lazy('login')
     model = Artigo
     template_name = 'Cadastro/listaTeses.html'
+
+class LivroList(ListView):
+    login_url = reverse_lazy('login')
+    model = Livro
+    template_name = 'Cadastro/livros.html'
+
+class ArtigoList(ListView):
+    login_url = reverse_lazy('login')
+    model = Artigo
+    template_name = 'Cadastro/artigos.html'

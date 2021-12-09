@@ -42,13 +42,19 @@
             <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
 
-          <!--Sobre-->
+          <!--Artigo-->
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'sobre' %}">Sobre</a>
+            <a class="nav-link" href="{% url 'exibir-artigo' %}">Artigo</a>
           </li>
+
           <!--<li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
           </li>-->
+
+          <!--Livros-->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'exibir-livro' %}">Livros</a>
+          </li>
 
           {% if request.user.is_authenticated %}
 
@@ -69,17 +75,19 @@
           
           {% if request.user.is_authenticated %}
 
-          <!--Usuario (Dropdown)-->
+          <!--Usuario (Dropdown)
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Usuário
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{% url 'listar-livro' %}">Meus dados</a></li>
-              <li><a class="dropdown-item" href="{% url 'listar-local' %}">Alterar senha</a></li>
-              <li><hr class="dropdown-divider"></li>
+                <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="{% url 'logout' %}">Sair</a></li>
             </ul>
+          </li>-->
+
+          <!--Sair-->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">Sair</a>
           </li>
 
           {% else %}
