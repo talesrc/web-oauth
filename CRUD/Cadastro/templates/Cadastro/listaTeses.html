@@ -4,8 +4,10 @@
 
 {% block conteudo %}
     <hr>
-    <h3>Gêneros resgistrados</h3>
+    <h3>Artigos resgistrados</h3>
+    {% if request.user.is_authenticated %}
     <a href="{% url 'cadastro-artigo' %}" class="btn btn-primary btn-sm float-right">Cadastrar Artigo</a>
+    {% endif %}
     <hr>
     <div class="table table-reponsive">
         <table class="table table-striped">
@@ -14,7 +16,10 @@
                 <th>Autor(es)</th>
                 <th>Descrição</th>
                 <th>Ano</th>
-                <th>Opções</th>   
+                {% if request.user.is_authenticated %}
+                <th>Opções</th>
+                {% endif %}
+
             </tr>
 
             {% for artigo in object_list %}
@@ -23,11 +28,15 @@
                 <td>{{ artigo.autor }}</td>
                 <td>{{ artigo.descricao }}</td>
                 <td>{{ artigo.ano }}</td>
+
+                {% if request.user.is_authenticated %}
                 <td>
                     <a href="{% url 'editar-artigo' artigo.pk %}" class="btn btn-warning btn-sm">Editar</a>                    
                     <a href="{% url 'excluir-artigo' artigo.pk %}" class="btn btn-danger btn-sm">Excluir</a>
 
                 </td>
+                {% endif %}
+
             </tr>
             {% empty %}
 

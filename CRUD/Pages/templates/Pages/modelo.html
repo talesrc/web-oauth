@@ -42,20 +42,6 @@
             <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
 
-          <!--Artigo-->
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'exibir-artigo' %}">Artigo</a>
-          </li>
-
-          <!--<li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>-->
-
-          <!--Livros-->
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'exibir-livro' %}">Livros</a>
-          </li>
-
           {% if request.user.is_authenticated %}
 
           <!--Cadastro (Dropdown)-->
@@ -67,12 +53,28 @@
               <li><a class="dropdown-item" href="{% url 'listar-livro' %}">Livro</a></li>
               <li><a class="dropdown-item" href="{% url 'listar-local' %}">Gênero</a></li>
               <li><a class="dropdown-item" href="{% url 'listar-artigo' %}">Artigo</a></li>
+              <li><a class="dropdown-item" href="{% url 'listar-computer' %}">Computadores</a></li>
               <li><a class="dropdown-item" href="{% url 'registrar' %}">Novo Usuário</a></li>
             </ul>
           </li>
 
+          {% else %}
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Menu
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'listar-livro' %}">Livro</a></li>
+              <li><a class="dropdown-item" href="{% url 'listar-local' %}">Gênero</a></li>
+              <li><a class="dropdown-item" href="{% url 'listar-artigo' %}">Artigo</a></li>
+              <li><a class="dropdown-item" href="{% url 'listar-computer' %}">Computadores</a></li>
+            </ul>
+          </li>
+
           {% endif %}
-          
+
+
           {% if request.user.is_authenticated %}
 
           <!--Usuario (Dropdown)

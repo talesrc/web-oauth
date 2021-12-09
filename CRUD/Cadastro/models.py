@@ -32,3 +32,13 @@ class Artigo(models.Model):
 
     def __str__(self):
         return "{} - {}, {} ({})".format(self.titulo, self.autor, self.descricao, self.ano)
+
+class Computer(models.Model):
+    codigo = models.CharField(max_length=6, primary_key=True, verbose_name="Código")
+    data = models.DateField()
+    horario = models.TimeField()
+    nome = models.CharField(max_length=50)
+    matricula = models.CharField(max_length=6, verbose_name="Matrícula")
+
+    def __str__(self):
+        return "{}, {} - {}, {} ({})".format(self.codigo, self.data, self.horario, self.nome, self.matricula)

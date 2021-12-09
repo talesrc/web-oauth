@@ -5,7 +5,9 @@
 {% block conteudo %}
     <hr>
     <h3>Lista de Gêneros resgistrados</h3>
+    {% if request.user.is_authenticated %}
     <a href="{% url 'cadastro-local' %}" class="btn btn-primary btn-sm">Cadastrar Gênero</a>
+    {% endif %}
     <hr>
     <div class="table table-reponsive">
         <table class="table table-striped">
@@ -14,7 +16,9 @@
                 <th>Gênero</th>
                 <th>Corredor</th>
                 <th>Estante</th>
+                {% if request.user.is_authenticated %}
                 <th>Opções</th>   
+                {% endif %}
             </tr>
 
             {% for local in object_list %}
@@ -23,11 +27,13 @@
                 <td>{{ local.descricao }}</td>
                 <td>{{ local.corredor }}</td>
                 <td>{{ local.estante }}</td>
+                {% if request.user.is_authenticated %}
                 <td>
                     <a href="{% url 'editar-local' local.pk %}" class="btn btn-warning btn-sm">Editar</a>                    
                     <a href="{% url 'excluir-local' local.pk %}" class="btn btn-danger btn-sm">Excluir</a>
 
                 </td>
+                {% endif %}
             </tr>
             {% empty %}
 
