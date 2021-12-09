@@ -1,0 +1,40 @@
+{% extends 'Pages/modelo.html' %}
+
+{% load static %}
+
+{% block conteudo %}
+    <hr>
+    <h3>Gêneros resgistrados</h3>
+    <a href="{% url 'cadastro-artigo' %}" class="btn btn-primary btn-sm float-right">Cadastrar Artigo</a>
+    <hr>
+    <div class="table table-reponsive">
+        <table class="table table-striped">
+            <tr>
+                <th>Título</th>
+                <th>Autor(es)</th>
+                <th>Descrição</th>
+                <th>Ano</th>
+                <th>Opções</th>   
+            </tr>
+
+            {% for artigo in object_list %}
+            <tr>
+                <td>{{ artigo.titulo }}</td>
+                <td>{{ artigo.autor }}</td>
+                <td>{{ artigo.descricao }}</td>
+                <td>{{ artigo.ano }}</td>
+                <td>
+                    <a href="{% url 'editar-artigo' artigo.pk %}" class="btn btn-warning btn-sm">Editar</a>                    
+                    <a href="{% url 'excluir-artigo' artigo.pk %}" class="btn btn-danger btn-sm">Excluir</a>
+
+                </td>
+            </tr>
+            {% empty %}
+
+            <tr>
+                <td colspan="3">Nenhuma Tese/Dissertação cadastrada</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

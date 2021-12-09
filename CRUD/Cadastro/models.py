@@ -23,3 +23,12 @@ class Livro(models.Model):
 
     def __str__(self):
         return "{} - {}, {} ({})".format(self.titulo, self.autor, self.ano, self.local.codigo)
+
+class Artigo(models.Model):
+    titulo = models.CharField(max_length=80, verbose_name="Título")
+    autor = models.CharField(max_length=50)
+    descricao = models.CharField(max_length=150, verbose_name="Descrição")
+    ano = models.IntegerField()
+
+    def __str__(self):
+        return "{} - {}, {} ({})".format(self.titulo, self.autor, self.descricao, self.ano)
