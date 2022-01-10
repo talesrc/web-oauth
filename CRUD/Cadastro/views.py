@@ -7,6 +7,8 @@ from .models import Livro, Local, Artigo, Computer
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+#Teste de github
+
 ################## CREAT ####################### 
 class CadastroView(TemplateView):
     template_name = 'Cadastro/form.html'
