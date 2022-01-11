@@ -5,7 +5,7 @@ from django.urls import path
 from django.urls import include
 from rest_framework.authtoken.views import obtain_auth_token
 
-from api.views import TestView
+from api.views import LivroView, LivroCreateView
 
 
 urlpatterns = [
@@ -15,7 +15,9 @@ urlpatterns = [
     path('', include('Pages.urls')),
     path('', include('Cadastro.urls')),
     path('', include('Autenticacao.urls')),
-    path('api/', TestView.as_view(), name='test'),
+    #path('api/', TestView.as_view(), name='test'),
+    path('api/', LivroView.as_view(), name='test'),
+    path('create/', LivroCreateView.as_view(), name='create'),
     path('api/token/', obtain_auth_token, name='obtain-token'),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
 ]

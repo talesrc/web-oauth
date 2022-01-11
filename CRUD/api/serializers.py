@@ -11,11 +11,11 @@ class LivroForms(forms.ModelForm):
     class Meta:
         model = Livro
         fields = {
-            'titulo', 'autor'
+            'local','titulo', 'autor','ano'
         }
 """
 
 class LivroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Livro
-        fields = ['titulo', 'autor']
+        fields = ['local','titulo', 'autor','ano']
