@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'Autenticacao.apps.AutenticacaoConfig',
     'crispy_forms',
     #'nomedoapp.apps.NomedoappConfig',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'dj_rest_auth',
+    'api',
 ]
 
 #Crispy Forms
@@ -142,3 +146,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
 LOGIN_URL = 'login'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication'
+    ]
+}
+
+
+
+
+
+
+
