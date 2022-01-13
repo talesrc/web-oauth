@@ -19,9 +19,8 @@ urlpatterns = [
     path('api/', LivroView.as_view(), name='test'),
     path('create/', LivroCreateView.as_view(), name='create'),
     path('api/token/', obtain_auth_token, name='obtain-token'),
-    path('dj-rest-auth/', include('dj_rest_auth.urls')),
-
+    path('dj-rest-auth/', include('dj_rest_auth.urls')), 
     path('accounts/', include('allauth.urls')),
-    path('social-auth/', include("social_django.urls"), name='social')
+    path('social-auth/', include("social_django.urls"), name='social'),
 
 ]
