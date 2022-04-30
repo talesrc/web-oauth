@@ -3,7 +3,11 @@
 Instituto Federal de Pernambuco
 Diciplina: Desenvolvimento Web II
 
-Projeto: Criação de um sistema de gerenciamento de biblioteca 
+Projeto: Criação de um sistema de gerenciamento de biblioteca
+
+Senha
+admin
+ifpepaulista
 
 #Executar no terminal\
 python -m venv venv\

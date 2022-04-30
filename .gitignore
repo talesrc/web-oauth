@@ -1,0 +1,4 @@
+*.pyc
+venv/
+cert.crt
+cert.key

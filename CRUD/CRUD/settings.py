@@ -172,15 +172,17 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '528930422566-nbh5d5j3muholvptc5tp8or0mnh1edq3.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
-
-
 #Autenticação
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
 LOGIN_URL = 'login'
+
+
+#Dados obtidos do console do google
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '179227412138-qj5mir02b8ea8iuv24k5js6864dqgir1.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'g5jwJpOl5VYdbkQdqDeL3xPV'
+
+
 
 
 REST_FRAMEWORK = {
@@ -188,10 +190,3 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication'
     ]
 }
-
-
-
-
-
-
-
