@@ -74,5 +74,26 @@ https://developers.facebook.com/apps/?show_reminder=true
 
 
 
+Adicionar o backend abaixo: 
 
+```
+social_core.backends.facebook.FacebookOAuth2
+```
 
+Adicionar as seguintes variáveis com os dados obtidos no Facebook: 
+
+```
+SOCIAL_AUTH_FACEBOOK_KEY = "393994085924520"
+SOCIAL_AUTH_FACEBOOK_SECRET = "a33421356da79e98ac94805a7dae53
+```
+
+Link para a página de login 
+
+```
+<li class="facebook">
+                <a href="{% url 'social:begin' 'facebook' %}">Login com o Facebook </a>
+</li>
+
+```
+
+![image](https://user-images.githubusercontent.com/276077/166115991-ce422980-86dc-4c56-826c-439f4a292974.png)
