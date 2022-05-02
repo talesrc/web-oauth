@@ -5,9 +5,9 @@ Diciplina: Desenvolvimento Web II
 
 Projeto: Criação de um sistema de gerenciamento de biblioteca
 
-Senha
-admin
-ifpepaulista
+Senha do usário com permissão de administração:
+- Usuário: admin
+- senha: ifpepaulista
 
 #Executar no terminal\
 python -m venv venv\
