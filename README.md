@@ -32,6 +32,7 @@ git commit -m "mensagem"\
 git push origin main\
 
 ## Atividade 
+Nessa atividade você vai adicionar a autenticação via facebook em uma aplicação. Para fazer isso, siga os passos descritos abaixo:
 
 - Acesso ao site: https://developers.facebook.com/apps/?show_reminder=true e clique em 'Criar Aplicativo'
 ![image](https://user-images.githubusercontent.com/276077/166114761-e9b09073-3cee-4c5c-800a-619e694e98c3.png)
