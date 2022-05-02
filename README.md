@@ -100,7 +100,7 @@ SOCIAL_AUTH_FACEBOOK_KEY = ""  #Colocar ID obtido no aplicativo do facebook
 SOCIAL_AUTH_FACEBOOK_SECRET = "" #Colocar SECRET obtido no aplicativo do facebook
 ```
 
-Por fim, adicone o link para a página de login do facebook usando o redirecionamento url 'social:begin'
+Por fim, adicone o link para a página de login do facebook usando o redirecionamento url 'social:begin' no template de login (login.html)
 
 ```
 <li class="facebook">
