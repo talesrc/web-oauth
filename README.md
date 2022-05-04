@@ -1,15 +1,46 @@
-# WEBII-Sistema-CRUD
+# WEBII Sistema CRUD de Biblioteca
 
-Instituto Federal de Pernambuco
-Diciplina: Desenvolvimento Web II
+Instituto Federal de Pernambuco  - Campus Paulista 
 
-Projeto: Criação de um sistema de gerenciamento de biblioteca
+Diciplina: Desenvolvimento de Sistemas Web II
 
-Senha do usário com permissão de administração:
+Desenvolvido por:  [BeatrizFS](https://github.com/BeatrizFS/)
+
+Projeto: Sistema de gerenciamento de biblioteca
+
+## Passos para executar o projeto
+
+
+> O projeto já possui um banco de dados sqlite na pasta principal com
+> com algumas informações salvas. Você pode usar o usuário de administação
+> e também visualizar os livros que foram salvos no banco. 
+
+Senha do usuário com permissão de administração:
 - Usuário: admin
-- senha: ifpepaulista
+- Senha: ifpepaulista
 
-#Executar no terminal\
+1. Crie um ambiente virtual. Na pasta do projeto: 
+
+```
+python -m venv venv
+```
+
+2. Ative o ambiente virtual
+```
+source venv/bin/activate
+```
+
+3. Instale os requisitos
+```
+pip install -r requirements.txt
+```
+
+4. Entre na pasta do projeto e execute-o
+```
+python manager.py runserver_plus --cert cert.pem
+```
+
+# Executar no terminal\
 python -m venv venv\
 venv\Scripts\activate\
 pip install -r requirements.txt\
