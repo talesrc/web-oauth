@@ -77,7 +77,7 @@ https://dominio_escolhido:8000
 
 <!-- ![image](https://user-images.githubusercontent.com/276077/166114998-d8a9a060-1e2a-401d-a050-a06435ba40f1.png) -->
 
-   - Agora clique em configurações, no painel lateral. Nele você vai obter o ID da aplicação e o SECRET. Salve essas informações para serem usadas após a etapa de criação do aplicativo no site do facebook. 
+   - Agora clique em configurações, no painel lateral. Em 'Básico' você vai obter o ID da aplicação e o SECRET. Salve essas informações para serem usadas após a etapa de criação do aplicativo no site do facebook. 
 
 ![image](https://user-images.githubusercontent.com/276077/166115090-aeff0b29-68c5-4ee0-b5e6-1bfd5cbd6734.png)
 
