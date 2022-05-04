@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 4. Entre na pasta do projeto e execute-o
 ```
-python manager.py runserver_plus --cert cert.pem
+python manage.py runserver_plus --cert cert.pem
 ```
 
 ## Atividade 
