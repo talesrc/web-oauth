@@ -41,6 +41,15 @@ python manager.py runserver_plus --cert cert.pem
 ```
 
 ## Atividade 
+Nesta atividade você precisa adicionar a autenticação com oauth do Google e do Facebook no projeto da biblioteca. Siga os passos descritos abaixo: 
+
+1. Crie uma entrada para um domínio interno na sua máquina, como indicado no passo 5 do [exemplo de OAUTH](https://github.com/rodrigoclira/devweb2/tree/main/autenticacao-social). Crie o domínio com as iniciais de cada participante do projeto mais a adição do sufixo '**site.com**'. Logo, a dupla formada por **R**enan e **T**om, teriam  que adicionar o domínio '**rtsite.com**' no seu arquivo de host. Se tudo estiver configurado corretamente, você vai conseguir acessar ao  projeto no navegador através do https://rtsite.com/8000. Só avance para a próxima atividade quando isso estiver funcionando.
+
+> Se o django informar que o domínio não é um 'alowed_hosts', adicione-o no settings.py. 
+
+2. Crie um aplicativo no Google Developer Console seguindo os passos descritos [AQUI](https://github.com/rodrigoclira/devweb2/tree/main/autenticacao-social). Perceba que apenas é necessário criar as etapas a partir do passo 10. Tome cuidado para trocar a indicação de 'mysite.com' para o domínio definido no passo anterior. 
+
+
 Nessa atividade você vai adicionar a autenticação via facebook em uma aplicação. Para fazer isso, siga os passos descritos abaixo:
 
 - Acesso ao site: https://developers.facebook.com/apps/?show_reminder=true e clique em 'Criar Aplicativo'
