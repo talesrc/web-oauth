@@ -126,11 +126,13 @@ SOCIAL_AUTH_FACEBOOK_SECRET = "" #Colocar SECRET obtido no aplicativo do faceboo
 
 ```
 
-Por fim, certifique-se de que o urls.py principal da aplicação contém a linha abaixo no urlpatterns
+   - Certifique-se de que o urls.py principal da aplicação contém a linha abaixo no urlpatterns
 
 ```
     path('social-auth/', include("social_django.urls"), name='social'),
 ```
+
+   - Teste o login com a conta do Facebook. 
 
 _Bonus_: 
 Mude os links do login por Facebook e Google por imagens como as apresentadas abaixo. 
