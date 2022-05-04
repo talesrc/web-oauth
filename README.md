@@ -58,7 +58,7 @@ Nesta atividade você precisa adicionar a autenticação com oauth do Google e d
 ![image](https://user-images.githubusercontent.com/276077/166114779-922c9385-fb37-425c-af4b-c0382aae707e.png)
 
 
-   - Dê um novo para a sua aplicação
+   - Dê um nome para a sua aplicação
 ![image](https://user-images.githubusercontent.com/276077/166114797-7e0b04fb-9476-4eb4-b434-561777f9fa82.png)
 
    - Na tela de adição de produtos, escolha a opção 'Login do Facebook' (a opção não está sendo exibida na imagem porque o print foi realizado após a escolha)
