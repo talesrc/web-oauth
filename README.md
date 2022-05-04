@@ -43,7 +43,7 @@ python manager.py runserver_plus --cert cert.pem
 ## Atividade 
 Nesta atividade você precisa adicionar a autenticação com oauth do Google e do Facebook no projeto da biblioteca. Para isso siga os passos descritos abaixo: 
 
-1. Crie uma entrada para um domínio interno na sua máquina, como indicado no passo 5 do [exemplo de OAUTH](https://github.com/rodrigoclira/devweb2/tree/main/autenticacao-social). Crie o domínio com as iniciais de cada participante do projeto mais a adição do sufixo '**site.com**'. Logo, a dupla formada por **R**enan e **T**om, teriam  que adicionar o domínio '**rtsite.com**' no seu arquivo de host. Se tudo estiver configurado corretamente, você vai conseguir acessar ao  projeto no navegador através do https://rtsite.com/8000. Só avance para a próxima atividade quando isso estiver funcionando.
+1. Crie uma entrada para um domínio interno na sua máquina, como indicado no passo 5 do [exemplo de OAUTH](https://github.com/rodrigoclira/devweb2/tree/main/autenticacao-social). Crie o domínio com as iniciais de cada participante do projeto mais a adição do sufixo '**site.com**'. Logo, a dupla formada por **R**enan e **T**om, teriam  que adicionar o domínio '**rtsite.com**' no seu arquivo de host. Se tudo estiver configurado corretamente, esses estudantes conseguirão acessar ao  projeto no navegador através do https://rtsite.com/8000. Agora crie o seu domínoi (baseado no nome dos participantes), configure localmente e tente acessá-lo após rodar o programa. Só avance para a próxima atividade quando isso estiver funcionando.
 
 > Se o django informar que o domínio não é um 'allowed_hosts', adicione-o no settings.py. (Passo 6 do [exemplo de OAUTH](https://github.com/rodrigoclira/devweb2/tree/main/autenticacao-social)) 
 
