@@ -136,6 +136,6 @@ SOCIAL_AUTH_FACEBOOK_SECRET = "" #Colocar SECRET obtido no aplicativo do faceboo
 
    - Teste o login com a conta do Facebook. 
 
-_Bonus_: 
+_OPCIONAL_: 
 Mude os links do login por Facebook e Google por imagens como as apresentadas abaixo. 
 ![image](https://user-images.githubusercontent.com/276077/166115991-ce422980-86dc-4c56-826c-439f4a292974.png)
