@@ -7,5 +7,5 @@ urlpatterns = [
         template_name='autenticacao/login.html'
     ), name="login"),
     path('logout/', auth_views.LogoutView.as_view(), name="logout"),
-    path('registrar/', UsuarioCreate.as_view(), name="registrar"),
+    path('registrar/', UsuarioCreate.as_view(), name="registrar")
 ]

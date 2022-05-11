@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-^6ba6&71vqadwn%()@ejd6$e9j-25ngmvv=4waq#0!=f(=rkda
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'mtsite.com']
 
 
 # Application definition
@@ -154,7 +154,8 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 
-    'social_core.backends.google.GoogleOAuth2'
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2'
 
 ]
 
@@ -179,11 +180,11 @@ LOGIN_URL = 'login'
 
 
 #Dados obtidos do console do google
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'COLOQUE-KEY'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'COLOQUE-SECRET'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '521669866187-0k9gioofq4gmp8l94uj9fp2dq1i05i5k.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 
-
-
+SOCIAL_AUTH_FACEBOOK_KEY = '7430462656995347'
+SOCIAL_AUTH_FACEBOOK_SECRET = '1c04300f5e9718f3a3605e20ee6ed452'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
